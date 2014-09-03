@@ -1,0 +1,15 @@
+extends ../layout
+
+block content
+  h1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EDIT
+  form(method='post', role='form', action='/blog/' + blog.id)
+    input(name='_method', value='PUT', type='hidden')
+    fieldset
+      legend Editing saying
+        div.form-group
+          label  author
+          input(name='author',class='form-control',value="#{blog.author}")
+          label  content
+          input(name='content',class='form-control',value="#{blog.content}")
+        button.btn.btn-primary(type='submit') Submit
+        button.btn.btn-default(type='reset') Clear

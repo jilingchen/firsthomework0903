@@ -1,0 +1,15 @@
+extends ../layout
+
+block content
+  h1 New saying view
+
+  form(role='form', method='post', action='/blog')
+    fieldset
+      legend Add a saying
+      div.form-group
+        label  author
+        input(name='author',class='form-control')
+        label  content
+        input(name='content',class='form-control')
+      button.btn.btn-primary(type='submit') Submit
+      button.btn.btn-default(type='reset') Clear
